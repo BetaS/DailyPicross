@@ -5,13 +5,13 @@ import android.view.MotionEvent;
 import com.realapps.engine.core.scene.GameScene;
 import com.realapps.game.R;
 
-public class TitleScene extends GameScene {
+public class Title2 extends GameScene {
 
 	@Override
 	public void onInit() {
-		setBackgroundColor(255, 0, 255);
+		setBackgroundColor(255, 0, 0);
 		
-		loadImage("icon", R.drawable.icon, 0, 100, 100);
+		loadImage("icon2", R.drawable.icon, 0, 100, 105);
 	}
 
 	@Override
@@ -22,14 +22,8 @@ public class TitleScene extends GameScene {
 	@Override
 	public void onTouchScreen(MotionEvent event) {
 		// TODO Auto-generated method stub
-		startScene(new Title2(), true, true);
 	}
 
-	@Override
-	public void onBackPressed() {
-		finish(true);
-	}
-	
 	@Override
 	public void onTimer(int timer_idx) {
 		// TODO Auto-generated method stub
