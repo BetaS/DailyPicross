@@ -2,6 +2,7 @@ package com.realapps.android.dailypicross.scene;
 
 import android.view.MotionEvent;
 
+import com.realapps.engine.core.drawable.Drawable;
 import com.realapps.engine.core.scene.GameScene;
 import com.realapps.game.R;
 
@@ -9,9 +10,14 @@ public class TitleScene extends GameScene {
 
 	@Override
 	public void onInit() {
-		setBackgroundColor(255, 0, 255);
+		setBackgroundColor(255, 255, 255);
 		
-		loadImage("icon", R.drawable.icon, 0, 100, 100);
+		loadImage("bg", R.drawable.title_bg, 0, 0, 0);
+		loadImage("key", R.drawable.txt_presskey, 1, 240, 600).setOffsetToCenter();
+		
+		loadText("ver", "ver 1.0", 30, 1, 10, 800-30);
+		
+		setTimer(0, 500, 0);
 	}
 
 	@Override
@@ -22,7 +28,7 @@ public class TitleScene extends GameScene {
 	@Override
 	public void onTouchScreen(MotionEvent event) {
 		// TODO Auto-generated method stub
-		startScene(new Title2(), true, true);
+		replaceScene(new Title2(), true, false);
 	}
 
 	@Override
@@ -32,6 +38,12 @@ public class TitleScene extends GameScene {
 	
 	@Override
 	public void onTimer(int timer_idx) {
-		// TODO Auto-generated method stub
+		if(timer_idx == 0) {
+			Drawable drawable = findDrawableById("key");
+			if(drawable.isShow())
+				drawable.hide();
+			else
+				drawable.show();
+		}
 	}
 }

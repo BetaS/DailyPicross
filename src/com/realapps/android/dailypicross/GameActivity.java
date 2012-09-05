@@ -8,6 +8,6 @@ import com.realapps.engine.Game;
 public class GameActivity extends Game {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState, new TitleScene(), 720, 1280, 30, true);
+		super.onCreate(savedInstanceState, new TitleScene(), 480, 800, true, 30, true);
 	}
 }

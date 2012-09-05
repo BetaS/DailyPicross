@@ -9,9 +9,9 @@ public class Title2 extends GameScene {
 
 	@Override
 	public void onInit() {
-		setBackgroundColor(255, 0, 0);
-		
-		loadImage("icon2", R.drawable.icon, 0, 100, 105);
+		setBackgroundColor(255, 255, 255);
+
+		loadImage("bg", R.drawable.title_bg, 0, 0, 0);
 	}
 
 	@Override
