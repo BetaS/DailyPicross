@@ -23,4 +23,11 @@ public class MenuScene extends GameScene {
 	public void onTimer(int timer_idx) {
 		// TODO Auto-generated method stub
 	}
+	
+	@Override
+	public void onClick(UIView view) {
+		if(view.getId().equals("play")) {
+			startScene(new PlayScene("/mnt/sdcard/picross.txt"));
+		}
+	}
 }
