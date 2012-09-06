@@ -4,7 +4,7 @@ import com.realapps.android.dailypicross.R;
 import com.realapps.engine.core.scene.GameScene;
 import com.realapps.engine.core.scene.ui.UIView;
 
-public class Title2 extends GameScene {
+public class MenuScene extends GameScene {
 
 	@Override
 	public void onInit() {

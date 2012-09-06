@@ -28,7 +28,7 @@ public class TitleScene extends GameScene {
 	@Override
 	public void onTouch(MotionEvent event) {
 		super.onTouch(event);
-		replaceScene(new Title2(), true, false);
+		replaceScene(new MenuScene(), true, false);
 	}
 
 	@Override
